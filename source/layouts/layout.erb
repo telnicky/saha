@@ -7,7 +7,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= data.page.title || "The Middleman" %></title>
+    <title><%= data.page.title || "Saha" %></title>
     
     <%= stylesheet_link_tag "saha", "bootstrap" %>
     <%= javascript_include_tag  "all" %>
@@ -18,13 +18,13 @@
     <div class="container">
       <div class="navbar">
         <div class="navbar-inner">
-          <a class="brand" href="#">SAHA</a>
+          <%= link_to "Saha", "index.html", :class => "brand" %>
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Log</a></li>
-            <li><a href="#">References</a></li>
-            <li><a href="#">Docs</a></li>
-            <li><a href="#">Slides</a></li>            
+            <li class=<%= data.page.nav_home || "" %>><%= link_to "Home", "index.html" %></li>
+            <li class=<%= data.page.nav_logs || "" %>><%= link_to "Logs", "logs.html" %></li>
+            <li class=<%= data.page.nav_docs || "" %>><%= link_to "Docs", "documents.html" %></li>
+            <li class=<%= data.page.nav_slides || "" %>><%= link_to "Slides", "slides.html" %></li>            
+            <li class=<%= data.page.nav_refs || "" %>><%= link_to "References", "references.html" %></li>
           </ul>
         </div>
       </div>
