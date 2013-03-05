@@ -17,16 +17,31 @@
   }
 }
 
+.featurette-divider {
+  font-weight: bold;
+}
+
 .featurette {
   padding-top: 120px;
   overflow: hidden;
   .featurette-image {
     margin-top: -120px;
+    width: 512px;
+    height: 512px;
     &.pull-right {
       margin-left: 40px;      
     }
+
     &.pull-left {
       margin-right: 40px;
+    }
+
+    &.stress {
+      width: 256px;
+    }
+
+    &.sleep {
+      width: 412px;
     }
   }
 
