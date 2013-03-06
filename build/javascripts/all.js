@@ -2307,3 +2307,10 @@ return(!i||i!==r&&!b.contains(r,i))&&(e.type=o.origType,n=o.handler.apply(this,a
 
 
 
+
+$(function() {
+    var page = $("title").text();
+    var selector = ".nav ." + page;
+    $(".nav > .active").removeClass("active");
+    $(selector).addClass("active");
+});
